@@ -53,7 +53,7 @@ public class MatrixMultiplication{
 	Integer cols = null;
 	double[][] newArr = null;
 	while( true){
-	    String[] strArr = sc.nextLine().replaceAll("(\\s+)", " ").split(" ");
+	    String[] strArr = sc.nextLine().trim().replaceAll("(\\s+)", " ").split(" ");
 	    if( !strArr[0].isEmpty() ){
 		if( cols == null)
 		    cols = strArr.length;
