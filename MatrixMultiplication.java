@@ -113,7 +113,7 @@ public class MatrixMultiplication{
 	return width + 2;  //  +2 accounts for the space taken by decimal portion of the double.
     }
 
-    static double[][] multiplyMatrix( double[][] a, double[][] b){
+    private static double[][] multiplyMatrix( double[][] a, double[][] b){
 	int numProducts = a[0].length,
 	           rows = a.length,
 	           cols = b[0].length;
@@ -122,8 +122,8 @@ public class MatrixMultiplication{
 	for( int i = 0; i < rows; i++){
 	    for( int j = 0; j < cols; j++){
 		double sumCell = 0;
-		for( int l = 0; l < numProducts; l++){
-		    sumCell += a[i][l] * b[l][j];
+		for( int k = 0; k < numProducts; k++){
+		    sumCell += a[i][k] * b[k][j];
 		}
 		c[i][j] = sumCell;
 	    }
