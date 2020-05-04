@@ -41,7 +41,7 @@ public class MatrixMultiplication{
 		
 	input.close();
 
-	C = multiplyMatrix( A, B, A.length, B[0].length);
+	C = multiplyMatrix( A, B);
 	printMatrix( C);
     }
 
@@ -113,10 +113,12 @@ public class MatrixMultiplication{
 	return width + 2;  //  +2 accounts for the space taken by decimal portion of the double.
     }
 
-    static double[][] multiplyMatrix( double[][] a, double[][] b, int rows, int cols){
-	int numProducts = a[0].length;
-	double[][] c = new double [rows][cols];
-	
+    static double[][] multiplyMatrix( double[][] a, double[][] b){
+	int numProducts = a[0].length,
+	           rows = a.length,
+	           cols = b[0].length;
+	double[][]    c = new double [rows][cols];	
+
 	for( int i = 0; i < rows; i++){
 	    for( int j = 0; j < cols; j++){
 		double sumCell = 0;
