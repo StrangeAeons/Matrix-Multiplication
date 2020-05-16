@@ -50,12 +50,12 @@ public class MatrixMultiplication{
 	System.out.println("Enter the " + numArr[arrIndex] +
 			   " matrix row by row : (Enter blank line to terminate)\n");
 	int rows = 0;
-	Integer cols = null;
+	int cols = 0;
 	double[][] newArr = null;
 	while( true){
 	    String[] strArr = sc.nextLine().trim().replaceAll("(\\s+)", " ").split(" ");
 	    if( !strArr[0].isEmpty() ){
-		if( cols == null)
+		if( cols == 0)
 		    cols = strArr.length;
 		
 		double[] dblArr = new double[cols];
